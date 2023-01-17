@@ -1,0 +1,122 @@
+@font-face {
+    font-family:"Aurora-pro.ttf";
+    src: url("../fonts/Aurora-pro.ttf");
+}
+
+#header{
+    width: 100%;
+    background: linear-gradient(to top, #d4b500 0%, #ffffff 100%);
+    font-family:"Oswald-Bold";
+    font-size: 30px;
+}
+
+
+
+
+/* le style du content */
+#content{ 
+    width:100%;
+    min-height: 100% ;
+    padding: 60px 1px;
+    background-color : rgb(212, 181, 0) ;
+}
+
+
+/* style du footer bas de page */
+#footer{ 
+    width:100%;
+    height: 140px;
+    position:absolute;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    text-align: center;
+    background: linear-gradient(to top,#ffffff  0%, #d4b500 100%);
+    margin-top: 40px;
+}
+
+.navbar-brand{
+    margin-right: 50px;
+}
+
+.nav-link{
+    margin-right: 50px;
+}
+
+.accueil_titre{
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+
+figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    max-width: 220px;
+    margin: auto;
+}
+
+img {
+    max-width: 220px;
+    max-height: 150px;
+}
+
+figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+
+.tx-tfm{
+    text-transform:uppercase;
+}
+
+.mybtn{
+    border-radius:50px;
+}
+
+.FormElement{
+    margin-bottom: 20px;
+    text-align: left;
+}
+    
+
+.Logincontener{
+
+    margin-bottom: 1px;
+
+}
+
+.Margincontener{
+
+    margin-top: 1px;
+}
+
+.LoginInput{
+    text-align: left;
+    margin: 20px auto;
+}
+
+.ConnexElement{
+    margin-top: 80px;
+}
+
+
+.form-signin {
+    width: 100%;
+    padding: 15px;
+    margin: auto;
+}
+
+.buttonLogForm{
+    box-shadow: 1px 2px 2px 1px #333435;
+}
+
+.buttonPosForm{
+    margin-right: 5px;
+}
