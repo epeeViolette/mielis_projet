@@ -25,7 +25,7 @@
 
     echo("<div class='col-3'>
             <figure>
-                <img src='./images/".$image_miel."'>
+                <img style='margin:auto;width:100%' src='./images/".$image_miel."'>
                 <figcaption>".$nom_miel."</figcaption>
                 <strong>Type de miel:</strong>".$type_miel."
                 <strong>Provenance:</strong>".$provenance_miel."

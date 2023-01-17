@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-12 accueil_titre">
         <h2>Bonjour et bienvenue sur notre site !</h2><br>
-        <img src="./images/logo.png" style="width: 700px;">
+        <img src="./images/logo.png" style="width: 100%;height:100%;">
     </div>
 </div>
 
