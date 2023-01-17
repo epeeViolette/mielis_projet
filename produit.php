@@ -21,6 +21,7 @@
         $provenance_miel = $enregistrement['provenance_miel'];
         $description_miel = $enregistrement['description_miel'];
         $image_miel = $enregistrement['image'];
+        $prix_miel = $enregistrement['prix'];
 
 
     echo("<div class='col-3'>
@@ -30,6 +31,7 @@
                 <strong>Type de miel:</strong>".$type_miel."
                 <strong>Provenance:</strong>".$provenance_miel."
                 <strong>Description:</strong>".$description_miel."
+                <strong>Prix:</strong>".$prix_miel."€
             </figure>
         </div>");
         
