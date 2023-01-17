@@ -83,6 +83,7 @@
             <!-- "footer" va servir à parametrer le bas de la page-->
             <div id="footer">
                 <div class="gauche"><strong>Projet "Mielis" BTS SIO</strong></div>
+                <a href="./mentions_legales/mensions_legales.pdf" target="blank">Mentions légales du site</a>
                 <div class="droite">Copyright © 2023 <br> DYLAN OIKNINE -- SIMEON FRIEDRICH</div>
             </div>
 
