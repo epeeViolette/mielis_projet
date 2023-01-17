@@ -82,9 +82,6 @@ if (isset($_POST['ajouter'])) {
                     <textarea type="text" id="description_miel" name="description_miel" rows="6" cols="50"></textarea>
                 </div>
             </div>
-
-
-            <!--------------à voir en cours pour recuperer une image à telecharger ----------------->
             <div class="row">
                 <div class="col-12">
                     <label for="image" class="form-label">Image du produit:</label>
@@ -95,9 +92,6 @@ if (isset($_POST['ajouter'])) {
                     <input type="text" name="prix"/>
                 </div>
             </div>
-            <!-------------------------------------------------------------------------------------->
-
-
             
             <div class="row">
                 <div class="col-12">
