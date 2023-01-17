@@ -26,7 +26,7 @@ if (isset($_POST['ajouter'])) {
         $info = pathinfo($_FILES['image']['name']) ;
         //$filename = $info['filename'];
         $ext = $info['extension'];
-        $nameOfFile = "./images/photo_".$id.".".$ext;
+        $nameOfFile = "photo_".$id.".".$ext;
     
 
         /*
@@ -36,7 +36,7 @@ if (isset($_POST['ajouter'])) {
         */
         //$b="./images/photo_".$id.".".pathinfo($_FILES['image']['name']['extension']);
         //echo ('<div class="alert alert-success" role="alert">Enregistrement avec succès !</div>');
-        move_uploaded_file($_FILES['image']['tmp_name'],$nameOfFile);
+        move_uploaded_file($_FILES['image']['tmp_name'],"./images/".$nameOfFile);
 
         $lien = connect_to_db();
 
