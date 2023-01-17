@@ -3,9 +3,11 @@
 
 if (isset($_POST['ajouter'])) {
 
+    /*
     echo('<pre>');
     print_r($_FILES);
     echo('</pre>');
+    */
 
     $lien = connect_to_db();
 

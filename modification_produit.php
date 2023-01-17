@@ -3,6 +3,12 @@
 
 if (isset($_POST['modifier'])) {
 
+    /*
+    echo('<pre>');
+    print_r($_FILES);
+    echo('</pre>');
+    */
+
     $lien = connect_to_db();
 
     $stmt = $lien->prepare('UPDATE miel SET nom_miel = :nom_miel,type_miel = :type_miel,provenance_miel = :provenance_miel,description_miel = :description_miel,prix = :prix WHERE id_miel =:id_miel');
@@ -13,13 +19,34 @@ if (isset($_POST['modifier'])) {
     $stmt->bindValue(':prix', $_POST['prix'], PDO::PARAM_STR);
     $stmt->bindValue(':id_miel', $_POST['id_miel'], PDO::PARAM_INT);
     $stmt->execute();
+    $id=$_POST['id_miel'];
 
-    $erreur="";
+    if ($_FILES['image']['error']== 0) {
 
-    if (strlen($erreur) == 0) {
+        $info = pathinfo($_FILES['image']['name']) ;
+        //$filename = $info['filename'];
+        $ext = $info['extension'];
+        $nameOfFile = "photo_".$id.".".$ext;
+    
+
+        /*
+        echo('<pre>');
+        print_r($info);
+        echo('</pre>');
+        */
+        //$b="./images/photo_".$id.".".pathinfo($_FILES['image']['name']['extension']);
         //echo ('<div class="alert alert-success" role="alert">Enregistrement avec succès !</div>');
+        move_uploaded_file($_FILES['image']['tmp_name'],"./images/".$nameOfFile);
+
+        $lien = connect_to_db();
+
+        $stmt = $lien->prepare('UPDATE miel SET image = :image WHERE id_miel = :id');
+        $stmt->bindValue(':image', $nameOfFile, PDO::PARAM_STR);
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+
     } else {
-        echo ('<div class="col-12">' . $erreur . '</div>');
+        echo ('<div class="col-12">' . $_FILES['image']['error']. '</div>');
     }
 } else {
     
@@ -38,7 +65,6 @@ if (isset($_POST['modifier'])) {
         $type_miel_select = $enregistrement['type_miel'];
         $provenance_miel_select = $enregistrement['provenance_miel'];
         $description_miel_select = $enregistrement['description_miel'];
-        $image_miel_select = $enregistrement['image'];
         $prix_miel_select = $enregistrement['prix'];
     }
 
@@ -46,7 +72,7 @@ if (isset($_POST['modifier'])) {
 
 
 
-    <form action="./index.php?page=modification_produit" method="post">
+    <form action="./index.php?page=modification_produit" enctype="multipart/form-data" method="post">
         <div class="row" style="text-align: center;">
             <div class="col-12">
                 <h3>Modification du produit:</h3>
