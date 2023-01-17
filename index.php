@@ -71,7 +71,7 @@
             
 
             <!-- "content" va servir à parametrer le corps de la page-->
-            <div id="content" class="row">
+            <div id="content" class="row" style="margin-right: 0px;margin-left: 0px;">
 
             <?php
             //ici dans le body sera la page par defaut à afficher

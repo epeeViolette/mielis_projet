@@ -8,7 +8,7 @@ if (isset($_POST['oui'])) {
     $stmt = $lien->prepare('DELETE FROM miel WHERE id_miel =:id_miel');
     $stmt->bindValue(':id_miel', $_POST['id_miel'], PDO::PARAM_INT);
     $stmt->execute();
-    echo ('<div class="alert alert-success" role="alert">Suppression avec succès !</div>');
+    //echo ('<div class="alert alert-success" role="alert">Suppression avec succès !</div>');
 
 }else{
     $id_miel = $_GET['id'];

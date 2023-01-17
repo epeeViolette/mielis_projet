@@ -37,7 +37,6 @@ body{
     text-transform: uppercase;
     text-align: center;
     background: linear-gradient(to top,#ffffff  0%, #d4b500 100%);
-    margin-top: 40px;
 }
 
 .navbar-brand{
