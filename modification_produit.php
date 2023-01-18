@@ -107,7 +107,7 @@ if (isset($_POST['modifier'])) {
                 </div>
                 <div class="col-12">
                     <label>Prix:</label>
-                    <input type="text" name="prix" value="<?php echo $prix_miel_select; ?>"/>
+                    <input type="number" name="prix" value="<?php echo $prix_miel_select; ?>"/>
                 </div>
             </div>
             <div class="row">
