@@ -91,7 +91,7 @@ if (isset($_POST['ajouter'])) {
                 </div>
                 <div class="col-12">
                     <label>Prix:</label>
-                    <input type="text" name="prix"/>
+                    <input type="number" name="prix"/>
                 </div>
             </div>
             
