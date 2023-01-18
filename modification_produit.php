@@ -3,11 +3,11 @@
 
 if (isset($_POST['modifier'])) {
 
-    
+    /*
     echo('<pre>');
     print_r($_FILES);
     echo('</pre>');
-    
+    */
 
     $lien = connect_to_db();
 
@@ -19,6 +19,7 @@ if (isset($_POST['modifier'])) {
     $stmt->bindValue(':prix', $_POST['prix'], PDO::PARAM_STR);
     $stmt->bindValue(':id_miel', $_POST['id_miel'], PDO::PARAM_INT);
     $stmt->execute();
+    close_db($lien);
     $id=$_POST['id_miel'];
 
     if ($_FILES['image']['error']== 0) {
@@ -29,11 +30,12 @@ if (isset($_POST['modifier'])) {
         $nameOfFile = "photo_".$id.".".$ext;
     
 
-        
+        /*
         echo('<pre>');
         print_r($info);
         echo('</pre>');
-        
+        */
+
         //$b="./images/photo_".$id.".".pathinfo($_FILES['image']['name']['extension']);
         //echo ('<div class="alert alert-success" role="alert">Enregistrement avec succès !</div>');
         move_uploaded_file($_FILES['image']['tmp_name'],"./images/".$nameOfFile);
@@ -44,9 +46,14 @@ if (isset($_POST['modifier'])) {
         $stmt->bindValue(':image', $nameOfFile, PDO::PARAM_STR);
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
+        close_db($lien);
+
+
+        header('Location: ./index.php?page=produit_admin');
 
     } else {
-        echo ('<div class="col-12">' . $_FILES['image']['error']. '</div>');
+        //echo ('<div class="col-12">' . $_FILES['image']['error']. '</div>');
+        header('Location: ./index.php?page=produit_admin');
     }
 } else {
     
@@ -58,6 +65,7 @@ if (isset($_POST['modifier'])) {
     $stmt = $lien->prepare('SELECT * FROM miel WHERE id_miel = :id_miel');
     $stmt->bindValue(':id_miel', $id_miel, PDO::PARAM_INT);
     $stmt->execute();
+    close_db($lien);
     $rows = $stmt->fetchAll();
 
     foreach ($rows as $enregistrement) {

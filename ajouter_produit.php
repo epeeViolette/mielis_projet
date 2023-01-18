@@ -19,6 +19,7 @@ if (isset($_POST['ajouter'])) {
     $stmt->bindValue(':image', '', PDO::PARAM_STR);
     $stmt->bindValue(':prix', $_POST['prix'], PDO::PARAM_STR);
     $stmt->execute();
+    close_db($lien);
     $id=$lien->lastInsertId();
 
 
@@ -46,10 +47,16 @@ if (isset($_POST['ajouter'])) {
         $stmt->bindValue(':image', $nameOfFile, PDO::PARAM_STR);
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
+        close_db($lien);
 
     } else {
         echo ('<div class="col-12">' . $_FILES['image']['error']. '</div>');
     }
+
+    
+    header('Location: ./index.php?page=produit_admin');
+
+
 }
 
 ?>
