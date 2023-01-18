@@ -3,11 +3,11 @@
 
 if (isset($_POST['modifier'])) {
 
-    /*
+    
     echo('<pre>');
     print_r($_FILES);
     echo('</pre>');
-    */
+    
 
     $lien = connect_to_db();
 
@@ -29,11 +29,11 @@ if (isset($_POST['modifier'])) {
         $nameOfFile = "photo_".$id.".".$ext;
     
 
-        /*
+        
         echo('<pre>');
         print_r($info);
         echo('</pre>');
-        */
+        
         //$b="./images/photo_".$id.".".pathinfo($_FILES['image']['name']['extension']);
         //echo ('<div class="alert alert-success" role="alert">Enregistrement avec succès !</div>');
         move_uploaded_file($_FILES['image']['tmp_name'],"./images/".$nameOfFile);
