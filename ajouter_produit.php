@@ -105,6 +105,7 @@ if (isset($_POST['ajouter'])) {
             <div class="row">
                 <div class="col-12">
                     <input class="btn btn-outline-primary" type="submit" name="ajouter" value="Ajouter">
+                    <a class="btn btn-outline-danger" type="button" name="retour" href="./index.php?page=produit_admin">Retour</a>
                 </div>
             </div>
         </div>

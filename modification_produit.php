@@ -123,6 +123,7 @@ if (isset($_POST['modifier'])) {
                 <input type="hidden" name="id_miel" value="<?php echo $id_miel; ?>"/>
                     <input class="btn btn-outline-success" type="submit" name="modifier" value="Modifier">
                     <a class="btn btn-danger" type="button" href='./index.php?page=supprimer_produit&id=<?php echo $id_miel; ?>' name="supprimer" >supprimer</a>
+                    <a class="btn btn-outline-danger" type="button" name="retour" href="./index.php?page=produit_admin">Retour</a>
                 </div>
             </div>
         </div>
