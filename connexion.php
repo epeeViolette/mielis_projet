@@ -2,17 +2,7 @@
 
 <form action="./index.php?page=verification" method="post" name="login">
 
-<?php
-    
-    if(isset($_GET['erreur']))
-    {
-        $err = $_GET['erreur'];
-        if($err==1 || $err==2)
-        {
-            echo "<h2 style='color:#ff99cc'>Email ou mot de passe incorrect</h2>";
-        }
-    }
-?>
+
 
     <main class="form-signin">
             <!--Envoie vers la page formulaire_recap_final une fois connecter-->

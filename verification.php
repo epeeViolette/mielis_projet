@@ -31,6 +31,7 @@ if(isset($_POST['identifiant']) && isset($_POST['mdp']))
         else
         {
         header('Location: ./index.php?erreur=1'); // utilisateur ou mot de passe incorrect
+        echo('utilisateur ou mot de passe incorrect !');
         }
     }
     else
