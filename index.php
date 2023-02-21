@@ -1,5 +1,14 @@
     <?php
 
+        /*****  voir l'info php et afficher les erreurs   *****/
+
+
+        
+        //phpinfo();
+        //error_reporting(E_ALL);
+
+
+        /*****************************************************/
         session_start();
 
         //variable stockant la page par defaut
@@ -12,10 +21,10 @@
 
         }
     
-
+        echo("5");
             
     include_once('./connexion_bdd.php');
-    
+        echo("6");
     ?>
 
 <html>
