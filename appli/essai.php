@@ -39,7 +39,9 @@
             $requete->bindValue(':mdp_utilisateur', $mdp, PDO::PARAM_STR);
             $requete->execute();
             $rows = $requete->fetchAll();
+            
             $a =array(); 
+
         foreach($rows as $enregistresement){
             $a['id_eleve'] = $enregistresement['id_eleve'];
             $a['nom_eleve'] =  $enregistresement['nom_eleve'];
@@ -49,7 +51,7 @@
             $a['mdp_eleve'] = $enregistresement['mdp_eleve'];
         }
 
-        echo "SUCCESS% <br> ".json_encode($a);
+        echo "SUCCESS%".json_encode($a);
         }
         else
         {

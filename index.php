@@ -20,11 +20,10 @@
                 $page_a_afficher = $_GET['page'];
 
         }
-    
-        echo("5");
+
             
-    include_once('./connexion_bdd.php');
-        echo("6");
+        include_once('./connexion_bdd.php');
+
     ?>
 
 <html>
