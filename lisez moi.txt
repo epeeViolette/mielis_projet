@@ -1,0 +1,6 @@
+
+
+Nom de la bdd : "mielis"
+
+URL à changer dans l'appli 
+dans la class:"Login" à la ligne 35
