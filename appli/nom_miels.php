@@ -8,7 +8,7 @@
         $lien = connect_to_db();
 
     
-        $requete =$lien->prepare("SELECT nom_miel FROM miel ");  
+        $requete =$lien->prepare("SELECT * FROM miel ");  
         $requete->execute();
         //$rows = $requete->fetch(PDO::FETCH_ASSOC);
         $rows = $requete->fetchAll();
@@ -17,7 +17,7 @@
         $tab_miel = array();
         $i=0;
         foreach($rows as $enregistresement){
-            //$tab_miel[$i]['id_miel'] = $enregistresement['id_miel'];
+            $tab_miel[$i]['id_miel'] = $enregistresement['id_miel'];
             $tab_miel[$i]['nom_miel'] = $enregistresement['nom_miel'];
             //$tab_miel[$i]['type_miel'] = $enregistresement['type_miel'];
             //array_push($tab_miel, $enregistresement['nom_miel']);
