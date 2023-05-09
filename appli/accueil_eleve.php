@@ -105,41 +105,6 @@ function insererDonneesDansTableDetailCommande($lien,$donnees,$id_commande){
 
 
 
-// //-----------------------------------------------------------
-
-
-//echo "SUCCESS%".json_encode($_POST."   ");
-
-//     $i=0; 
-
-//     foreach($_POST as $key => $value){
-//         $idMiel[$i] = $key;
-//         $qte[$i] = $value;
-//         $i++;
-//     }
-
-// echo "<pre>";
-//  print_r($idMiel);
-//  echo "</pre>";
-// echo "<pre>";
-//  print_r($qte);
-//  echo "</pre>";
-//     $ids = "";
-//     $quantites="";
-
-//     for($i=1;$i<sizeof($idMiel);$i++){
-//         //echo $ids."<br>";
-//         $ids = $ids.$idMiel[$i]."#";
-//         $quantites = $quantites.$qte[$i]."#";
-//     }
-
-
-//      $ids = substr($ids,0,-1);
-//      $quantites = substr($quantites,0,-1);
-
-// $nom_client = $_POST['NomClient']."<br>";
-// echo $ids."<br>";
-// echo $quantites."<br>";
 
 include('../connexion_bdd.php');
 // echo '<pre>';
@@ -160,31 +125,5 @@ if($id_commande!==null){
 echo "SUCCESS : %".$id_commande."  ---    ".$id_detailsCommande;
 
 
-
-
-
-
-        // $nbInsert = 0;
-        // $sql = 'select id_miel from miel';
-        // $res = $lien->query($sql);
-        // $sql = 'select id_commande from commandes Where id_eleve = '.$_POST['id_eleve'].' and nom_client = "'. $_POST['NomClient'].'" ';
-        // $res = $lien->query($sql);
-        // $id_commande = $res->fetch(PDO::FETCH_ASSOC);
-        // while($miel = $res->fetch(PDO::FETCH_ASSOC)) {
-        //     $id_miel = strval($miel['id_miel']);
-        //     if(isset($_POST[$id_miel])) {
-        //         $sql = 'INSERT INTO detailsCommandes (id_commande,id_miel,Qte_miel) values (:id_commande,:id_miel,:Qte_miel)';
-        //         $stmt = $lien->prepare($sql);
-        //         $quantity = intval($_POST[$id_miel]);
-        //         if($quantity > 0) {
-        //             $stmt->bindValue(':id_commande', $id_commande, PDO::PARAM_INT);
-        //             $stmt->bindValue(':id_miel', $id_miel, PDO::PARAM_INT);
-        //             $stmt->bindValue(':Qte_miel', $quantity, PDO::PARAM_INT);
-        //             $nbInsert++;
-        //             $stmt->execute();
-        //         }
-                
-        //     }
-        // }
 
         //echo json_encode(array('SUCCESS'=>true,'POST'=>$_POST,'nbInsert'=>$nbInsert));
