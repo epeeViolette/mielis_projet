@@ -54,6 +54,9 @@
                                             echo('<li class="nav-item">
                                                     <a class="nav-link active" aria-current="page" href="index.php?page=produit_admin">Nos miels</a>
                                                 </li>');
+                                            echo('<li class="nav-item">
+                                                <a class="nav-link active" aria-current="page" href="index.php?page=detailCommande_admin">Détail des commandes</a>
+                                            </li>');
                                         }else{
                                             echo('<li class="nav-item">
                                                     <a class="nav-link active" aria-current="page" href="index.php?page=produit">Nos miels</a>

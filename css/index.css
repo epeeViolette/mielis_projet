@@ -124,3 +124,30 @@ figcaption {
 .buttonPosForm{
     margin-right: 5px;
 }
+
+
+.table_parent,
+.td_parent {
+    border: 1px solid #333;
+}
+.th_parent{
+    border: 1px solid #333;
+}
+.thead_parent,
+.tfoot_parent {
+    background-color: #333;
+    color: #fff;
+}
+
+.table_parent{
+    text-align:center;
+}
+
+.caption_parent{
+    border: 1px solid #333;
+}
+
+.capt_DO{
+    margin: 50px;
+    text-align: center;
+}
